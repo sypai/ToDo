@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+
+        <!--<section id="first">-->
+        <div class="row m-5 sec-1">
+
+            <div class="col-sm-6">
+                <p class="red-text mb-0">Organize life, </p>
+                <p class="primary-text mb-0">Then go enjoy</p>
+                <p class="primary-text mb-1">it...</p>
+                <p class="secondary-text mb-4">
+                    From work to play, To-Do is the easiest way to get stuff done, every day.
+                </p>
+
+                <a href="{% url 'register' %}" class="p-4 text-center red-btn">Get Started</a>
+                <!--<a href="#second"><i class="fas fa-hand-point-down fa-4x"></i></a>-->
+            </div>
+
+            <div class="col-sm-6">
+                <img class="welcome-img" src="{%  static 'img/easy-life1.png' %}" alt="easy-life">
+            </div>
+        </div>
+
+
+        <hr style=" border:0.5px solid #394060;">
+        <hr style=" border:0.5px solid #e44332;">
+
+        <!--</section>-->
+
+        <!--<section id="second">-->
+        <div class="row mt-5">
+            <div class="col-sm-8">
+                <img class="welcome-img" src="{%  static 'img/easy-life2.png' %}" alt="easy-life">
+            </div>
+            <div class="col-sm-4">
+                <p class="primary-text mb-0">Never worry about </p>
+                <p class="primary-text mt-0 mb-1">forgetting things.. </p>
+                <p class="secondary-text mb-4">
+                    Let To-Do remember it all for you.
+                    You can get tasks out of your head and onto your to-do list anytime, anywhere, on any device.
+                </p>
+
+                <a href="../users/register.html" class="p-4 text-center blue-btn">Create Account</a>
+            </div>
+        </div>
+
+
+        <hr style=" border:0.5px solid #e44332;">
+        <hr style=" border:0.5px solid #394060; margin-bottom: 2rem;">
+        <!--</section>-->
+    </div>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid"  id="register-body">
+        <div class="row">
+            <div class="col-sm-12 col-lg-5 wrap">
+
+                <div class="signin">
+                    <span class="text-head">Welcome!</span>
+
+                    <form action="{% url 'register' %}" method="post">
+
+                        {% csrf_token %}
+                        {% include 'partials/_alerts.html' %}
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="first_name">First Name</label>
+                                <input type="text" name="first_name" id="name" autocomplete="off" class="text-input" required>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" name="last_name" id="surname" autocomplete="off" class="text-input" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" id="uname" autocomplete="off" class="text-input" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" autocomplete="off" class="text-input" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="pswd" autocomplete="off" class="text-input" required>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="password2">Confirm Password</label>
+                                <input type="password" name="password2" id="cpswd" autocomplete="off" class="text-input" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" value="Register" class="red-btn">Sign Up</button>
+                    </form>
+
+                    <div class="links text-center">
+                        Already have an account?
+                        <a href="{% url 'login' %}">Login <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-sm-0 col-lg-7">
+                <img class="side-img1" src="{% static "img/easy-life3.png" %}" alt="easy-life">
+            </div>
+        </div>
+    </div>
+{% endblock  %}

@@ -1,0 +1,292 @@
+@import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
+#dash-body{
+    overflow: hidden;
+}
+.showcase{
+    z-index: 0;
+    height: 30vh;
+    width: 100vw;
+    background-image: url("../img/head-bg.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.showcase:before{
+    z-index: 10;
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 30vh;
+    background: rgba(74, 74, 74, 0.4);
+}
+
+.nav-link{
+    color: #e6e6e6;
+    font-size: 1.2rem;
+}
+
+.myNav{
+    z-index: 1000;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 900;
+    background: rgba(27, 27, 27, 0.4);
+}
+
+.myIcons{
+    color: #e6e6e6;
+    outline: none;
+}
+
+.user-name{
+    font-size: 2rem;
+    margin-left: 0.7rem;
+    margin-top: 0.5rem;
+    color: #e6e6e6;
+}
+
+ .myDay h2{
+     position: relative;
+    text-align: center;
+    font-size: 72px;
+    font-weight: 700;
+    color: #e6e6e6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 100;
+     margin: 1rem 0 10px 0;
+}
+
+ .myDay h2 span{
+     display: inline-block;
+     padding:0.2em 0.2em 0 0.2em;
+     border: 10px solid #e6e6e6;
+ }
+
+ .date{
+     text-align: center;
+     font-weight: 700;
+     font-size: 1.5rem;
+     text-transform: uppercase;
+     color: #e6e6e6;
+     line-height: 1;
+ }
+
+.myNav .avatar{
+    border: none;
+    border-radius: 100%;
+    box-shadow: -1px 0  2px #5d8eee;
+    width: 4rem;
+    height: 4rem;
+}
+
+.side-img2{
+    margin: 1rem 5rem;
+    width:10vw;
+    height:20vh;
+}
+
+.side-img3{
+    margin: 22rem 0;
+    width:10vw;
+    height:20vh;
+}
+
+.myApp {
+    margin-top: 1.5rem;
+    width: 55vw;
+    height: 58vh;
+    background: #e6e6e6;
+    /*background: BLACK;*/
+    box-shadow: 0.25rem 0.25rem 5rem #6f6f6f;
+    overflow-y: auto;
+    border-right: 3px solid #5d8eee;
+    border-left: 3px solid #5d8eee;
+    border-bottom: 3px solid #ea6f61;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.myApp::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.myApp{
+    overflow: -moz-scrollbars-none;
+}
+
+.myApp{
+    -ms-overflow-style: none;
+}
+
+/*.myApp-card{*/
+    /*position: relative;*/
+/*}*/
+/*.title-holder{*/
+    /*position: absolute;*/
+/*}*/
+.app-title{
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    margin: 1.2rem 0 0 0;
+    background: #ea6f61;
+    color: #f0efea;
+    font-size: 1.5rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+.tasks{
+    padding: 0.1rem;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    border-bottom: 0.1rem solid #6fb415 ;
+    background: white;
+}
+
+/*.status{*/
+    /*text-align: center;*/
+    /*padding: 0.25rem;*/
+    /*margin: 1rem 1rem 1rem 0.5rem;*/
+    /*color: #6fb415;*/
+    /*!*border-right: 1px solid #6f6f6f;*!*/
+    /*!*border-bottom: 1px solid #6f6f6f;*!*/
+    /*font-size: 0.8rem;*/
+/*}*/
+
+.status input[type="checkbox"]{
+    display: none;
+}
+
+.status span::before{
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Font Awesome 5 Free";
+    content:"\f111" ;
+    padding: 0.25rem;
+    margin: 1rem 1rem 1rem 0.5rem;
+    color: #6f6f6f;
+    font-size: 1.5rem;
+    position: relative;
+    top: 15px;
+    cursor: pointer;
+    transition: all ease-in 300ms;
+}
+
+.status input:checked ~ span::before{
+    transition: all ease-in 300ms;
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    font-weight: 900;
+    color: #6fb415;
+}
+
+.task{
+    /*width: 100%;*/
+    /*padding: 0.25rem;*/
+    /*background: #e5e5e5;*/
+    /*border: none;*/
+    /*text-align: left;*/
+    /*margin: 1rem;*/
+    /*font-weight: 700;*/
+    display: inline-block;
+    outline: none;
+    margin: 1rem 1rem 1rem 0;
+    width: 22rem;
+    border: 0 solid #686867;
+    vertical-align: middle;
+    /*color: #6f6f6f;*/
+    color: #000;
+    padding: 0.5rem 0;
+    line-height: 1.3rem;
+    font-size: 1.2rem;
+}
+
+.tasks .done{
+    text-decoration: line-through;
+    color: #6f6f6f;
+}
+
+.tasks .pending{
+    color: #373737;
+}
+
+.status .pending{
+    color: #6f6f6f;
+}
+
+/*#add-to-do{*/
+    /*background: #5d8eee;*/
+    /*padding: 0.5rem 2rem;*/
+    /*text-align: center;*/
+    /*font-size: 1.5rem;*/
+    /*color: #f0efea;*/
+    /*transition: all ease-in 100ms;*/
+    /*outline: none;*/
+/*}*/
+
+/*#add-to-do:hover{*/
+    /*box-shadow: 5px 0 10px rgba(234, 111, 97, 0.4);*/
+/*}*/
+
+#dash-body .blue-btn{
+    padding: 0.5rem 2rem;
+    width: auto;
+    background: #5d8eee;
+}
+
+.to-do-text input{
+    padding: 0.5rem 1rem;
+    width: auto;
+    border:2px solid #5d8eee;
+    border-bottom: 3px solid #ea6f61;
+    border-top:none;
+    outline: none;
+}
+
+.to-do-text button{
+    outline: none;
+    padding: 0;
+    border:none;
+    color: #5d8eee;
+    background: none;
+    margin-top: 0.2rem;
+    margin-left: 0.5rem
+}
+
+.to-do-text button::after{
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2rem;
+    content: "\f0fe";
+}
+
+
+@media (max-width: 600px){
+    .myApp{
+        margin: 1.5rem auto;
+        width: 85vw;
+        height: 57vh;
+    }
+}
+
+@media (max-width: 760px) {
+    .side-img1, .side-img2, .side-img3{
+        display: none;
+    }
+
+    .col-md-12{
+        width: 100vw;
+    }
+}
+
+.show{
+    display: inline-block;
+}
+
+.hide{
+    display: none;
+}
+

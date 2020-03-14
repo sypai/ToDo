@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid"  id="login-body">
+        <div class="row">
+            <div class="col-sm-12 col-lg-5 wrap">
+
+                <div class="signin">
+                    <span class="text-head">Hey There!</span>
+
+                    {% include 'partials/_alerts.html' %}
+                    <form action="{% url 'login' %}" method="post">
+
+                        {% csrf_token %}
+
+                        <div>
+                            <label for="username">Email or Username</label>
+                            <input name="username" id="name" type="text" autocomplete="off" class="text-input">
+                        </div>
+
+                        <div>
+                            <label for="password">Password</label>
+                            <input name="password" id="code" type="password" class="text-input">
+                        </div>
+
+                        <button type="submit" class="red-btn">Log In</button>
+                    </form>
+
+                    <div class="links text-center">
+                        <a href="#">Forgot Password? <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+
+                    <div class="or">
+                        <hr class="bar">
+                        <span> OR </span>
+                        <hr class="bar">
+                    </div>
+
+                    <a href="{% url 'register' %}" class="blue-btn">Create Account</a>
+                </div>
+
+            </div>
+
+            <div class="col-sm-0 col-lg-7">
+                <img class="side-img" src="{% static 'img/side-img.png' %}" alt="easy-life">
+            </div>
+        </div>
+    </div>
+{% endblock  %}
