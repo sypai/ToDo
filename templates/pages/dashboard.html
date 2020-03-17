@@ -90,7 +90,9 @@
 
                     {% for to in todos %}
 
-                        <form action="{% url 'dashboard' %}" method="POST">
+                        {% if user.id == to.user_id %}
+
+                            <form action="{% url 'dashboard' %}" method="POST">
                         {% csrf_token %}
 
                             <div class="row tasks">
@@ -138,9 +140,12 @@
                             </div>
 
                         </form>
+
+                        {% endif %}
+
                     {% endfor %}
 
-                {% else %}
+                {% if user.profile.is_new %}
                     <div class="row tasks">
                         <div class="col-xs-2">
                             <label class="status">
@@ -156,6 +161,7 @@
                             </p>
                         </div>
                     </div>
+                {% endif %}
                 {% endif %}
 
             </div>
